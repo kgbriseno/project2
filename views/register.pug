@@ -1,0 +1,72 @@
+extends layout
+
+block content
+
+    head
+        script.
+            function clickSessionCounter () {
+            if(typeof(Storage) !== "undefined" ) { // this means if Storage was never created
+            if (sessionStorage .clickcount) { // if sessionStorage exist Add 1
+            sessionStorage .clickcount = Number(sessionStorage .clickcount)+1;
+            } else {
+            sessionStorage .clickcount = 1; // else set sessionStorage to 1
+            }
+            document.getElementById ("result").innerHTML = "You have registered "
+            + sessionStorage .clickcount + " time(s) in this session." ;
+            } else {
+            document.getElementById ("result").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+            }
+    header
+        
+        nav.mainnav
+            ul
+                li
+                    a(href='/') Home
+                li  
+                    ||
+                li
+                    a(href='/contact') Contact
+                li  
+                    ||
+                li
+                    a(href='/classes') Classes
+        nav.cta
+            ul
+                li
+                    a(href='/register') Register
+    main
+        section#intro-text
+            span Registration
+            
+        section#register
+            -data = data || {}
+            if errors
+                ul
+                for error in errors
+                    li= error.msg
+            h2 Register to sign up for Classes
+            form(action="." method="POST" class="form-registration")
+                label(for="name") Name:
+                input(
+                    type="text"
+                    id="name"
+                    name="name"
+                    value=data.name
+                )
+
+                label(for="email") Email:
+                input(
+                    type="email"
+                    id="email"
+                    name="email"
+                    value=data.email
+                )
+
+                input.btn(
+                    onclick="clickSessionCounter()"
+                    type="submit" 
+                    value="Register"
+                )
+    footer
+        | &copy; Copyright 2021

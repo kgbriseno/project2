@@ -1,0 +1,42 @@
+extends layout
+
+block content
+
+    header
+        nav.mainnav
+            ul
+                li
+                    a(href='/') Home
+                li  
+                    ||
+                li
+                    a(href='/contact') Contact
+                li  
+                    ||
+                li
+                    a(href='/classes') Classes
+        nav.cta
+            ul
+                li
+                a(href='/register') Register
+
+    main
+        h2 Workshops
+            ul
+                    li "Recall": Teaches recall in a 3 week worshop
+                    li "Loose Leash Walking": Teaches walking skills in a 4 week workshop
+                    li "Therapy Dog Certification": Prepares you and your dog to take the Therapy Dog International's test
+        h2 Puppy Classes
+            ul
+                    li "Puppy Starters": Teaches pups to interact with other pups for the first time
+                    li "Puppy Manners": Teaches basic manners to help with attention span
+                    li "Puppy Agility": Teaces basic movement and body awareness
+
+        h2 Adult Classes
+            ul
+                    li "Obedience Fundamentals": Teaches basic manner skills like sit, down, and stay
+                    li "Intermediate Obedience": Teaches loose leash walking, recall
+                    li "Advanced Obedience": Teaches tricks, games, and independence
+                
+    footer
+        | &copy; Copyright 2021

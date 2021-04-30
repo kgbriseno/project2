@@ -1,0 +1,73 @@
+extends layout
+
+block content
+
+    head
+        script(src='js/main.js')
+
+        link(rel='icon' href='favicon.ico' type='image/x-icon')
+        link(rel='apple-touch-icon' href='images/images/icon.png')
+        meta(name='theme-color' content='white')
+        meta(name='apple-mobile-web-app-capable' content='yes')
+        meta(name='apple-mobile-web-app-status-bar-style' content='black')
+        meta(name='apple-mobile-web-app-title' content='Hello')
+        meta(name='msapplicatoin-TileImage' content='images/images/icon.png')
+        meta(name='msapplicatoin-TileImage' content='#FFFFFFF')
+
+
+    #container
+        header
+            nav.mainnav
+                ul
+                    li
+                        a(href='/') Home
+                    li  
+                        ||
+                    li
+                        a(href='/contact') Contact
+                    li  
+                        ||
+                    li
+                        a(href='/classes') Classes
+            nav.cta
+                ul
+                    li
+                        a(href='/register') Register
+                    
+        main
+            h1 Looking to further your best companions education?
+            p
+            | Training is one of the most effective ways to comprehend the dog and whether he is attempting to share with you. After all, dog-friendly teaching makes learning more challenging, easy, and enjoyable. When you are teaching her, you are and the amount of time you spend with your cat, which helps to reinforce your bond. If you would like to view class descriptions please click 
+            a(href='/classes') here. 
+
+            
+            
+            .card-deck
+                .card
+                    img.card-img-top(src='/images/dt1.jpg' alt='Card image cap')
+                    .card-body
+                     h5.card-title Weekly Workshops
+                     p.card-text 
+                        | Class attendance sometimes becomes a hassle to maintain, but we also offer workshops that focus on various criterias embeded in our other sessions.
+                    
+                .card
+                    img.card-img-top(src='/images/dgt2.jpg' alt='Card image cap')
+                    .card-body
+                     h5.card-title Puppy Classes
+                     p.card-text 
+                        | Puppies are one of the easiest ages to build a strong foundation in their future education. They are quick to learn and adapt to all that comes their way. 
+                    
+                .card
+                    img.card-img-top(src='/images/dt3.jpg' alt='Card image cap')
+                    .card-body
+                     h5.card-title Adult Classes
+                     p.card-text 
+                        | We have numerous classes that take place weekly in which we specifically focus on training Adult pets. It is never too late to start educating your bestfriend.
+    footer
+        #nondisclaimer
+        .copy &copy; Copyright 2021 :: GreatCliffs.com
+        #disclaimer
+        p
+            | This website is designed and created solely for educational purposes only at Westcliff University. All contents are not intended for any commercial gain or use.
+        br
+        br

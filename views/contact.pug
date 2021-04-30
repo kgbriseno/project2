@@ -1,0 +1,54 @@
+extends layout
+
+block content
+    header
+        nav.mainnav
+            ul
+                li
+                    a(href='/') Home
+                li  
+                    ||
+                li
+                    a(href='/contact') Contact
+                li  
+                    ||
+                li
+                    a(href='/classes') Classes
+        nav.cta
+            ul
+                li
+                    a(href='/register') Register
+
+
+        main
+
+            .main-wrapper
+                .header
+                    h1 Contacts
+                #vue
+                    selections(v-for='post in posts' v-bind:post='post')
+            script.
+                Vue.component('selections', {
+                props: ['post'],
+                template: `<div class="selections">
+                <img src=" {{ post.image}}" width = "300" height = "250">
+                <h3>{{post.name}}</h3>
+                <p> <em v-html="post.content"></em></p>
+                </div>`
+                })
+                const vm = new Vue({
+                el: '#vue',
+                data: {
+                posts: [
+                {id:0, image:'/images/girl1.jpg', name: 'Head Trainer Rita', content: "123-900-9876"},
+                {id:0, image:'/images/girl2.jpg', name: 'Assistant Becca', content: '321-678-4532'},
+                {id:0, image:'/images/girl3.jpg', name: 'Assistant Lauren', content: '111-321-2345'},
+                ]
+                }
+                })
+
+
+    
+                
+    footer
+        | &copy; Copyright 2021

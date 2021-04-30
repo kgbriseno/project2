@@ -1,0 +1,223 @@
+/* Header */
+header{
+    width:100%;
+    min-height: 600px;
+    padding-top: 2em;
+    background: no-repeat url(images/images/Blackdog.jpeg) ;
+    background-size: 1500px;
+    color: #fff;
+}
+.main-header{
+    /*when calling a class selector use the dot(.0) 0.8 meands 80% opacity. */
+    background-color: none;
+    width: 900px;
+    margin: 2em auto 0 auto;
+    min-height: 100px;
+    height: 500px
+}
+
+.logo img{
+    width: 300px;
+    height: 150px;
+    margin: 0 2em 3em 0;
+    float: left;
+}
+
+/*Navigation*/
+.main-menu ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 30px;
+    padding-right:30px;
+    border: 2px solid #946e47;
+    line-height: 150px;
+    text-transform: uppercase;
+    font-size: 14px;
+    width: fit-content;
+    background-color: none;
+}
+.main-menu ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.main-menu ul li a:hover{
+    color: black;
+    background-color: #CC9966;
+}
+.main-menu ul li.active{
+    background: #CC9966;
+    border: none;
+}
+.main-menu ul li.active a{
+    color: #fff;
+}
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+p{
+    border-style: double;
+    border-color: #CC9966;
+    font-size: 20px;
+    
+}
+caption{
+    background-color: black;
+    color: blanchedalmond;
+    width: 700px;
+}
+table{
+    margin-left:auto;
+    margin-right: auto;
+    font-size: 20px;
+    border-style: solid;
+    text-align: center;
+}
+
+#PETA{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+}
+#kitty{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+}
+ul.Animal_Contacts{
+    list-style-image: url("images/dogicon.png");
+    padding-left: 10em;
+    display: inline-block;
+}
+
+legend{
+    color: #CC9966;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+fieldset{
+    border-color: #946e47;
+}
+form{
+    margin: 15px 0 0 0;
+}
+/* turns from span form to one by one on own line*/
+label{
+    display: block;
+    margin: 15px 0 0 0;
+}
+
+input{
+    width: 600px;
+}
+input[type="radio"]{
+    width: 25px;
+}
+textarea{
+    width: 600px;
+    height: 200px;
+}
+form .button [value="Contact"]{
+    margin:20px 0 10px 0;
+    color: #fff;
+    display: block;
+    width: 100px;
+    background-color: #CC9966;
+    margin: auto;
+    padding: 0.5em ;
+}
+#album li{
+    display: inline-block;
+}
+li img{
+    width: 300px;
+}    
+.captions{
+    width: 300px;
+    text-align: center;
+}
+#descriptions{
+    width: 200px;
+    text-align: center;
+    position: relative;
+    top: 150px;
+    left: 50px;
+    background-color: #fff;
+    border: none;
+    opacity: 70%;   
+    visibility: hidden;
+}
+#album li:hover #descriptions{
+    cursor: pointer;
+    visibility: visible;
+}
+#infoBox {
+    width: 500px;
+    background-color: #946e47;
+    margin-left: 1em;
+    position: relative;
+    bottom: 45em;
+    left:30em;
+}
+#infoBox p, h2 {
+    border: none;
+    margin-left: 1em;
+    text-align: center;
+
+
+}
+
+.lightbox-toggle {
+    color: black;
+}
+  
+.backdrop {
+    z-index: 1;
+    opacity: .0;
+    filter: alpha(opacity=0);
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+.box {
+    z-index: 2;
+    position: fixed;
+    opacity: 1;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    width: 600px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    -moz-box-shadow: 0px 0px 5px #444444;
+    -webkit-box-shadow: 0px 0px 5px #444444;
+    box-shadow: 0px 0px 5px #444444;
+}
+
+* {
+    z-index: 3;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+#gallery #photo a img {
+    width: 400px;
+}
+
+.box img {
+    width:100%;
+}
